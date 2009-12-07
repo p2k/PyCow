@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>PyCow Demo</title>
+		<script type="text/javascript" src="http://mootools.net/assets/scripts/mootools.core.js"></script>
+		<script type="text/javascript" src="../js/pycow.js"></script>
+		<script type="text/javascript">
+			dbgprint = function () {
+				var s = "";
+				var first = true;
+				
+				for (var i = 0; i < arguments.length; i++) {
+					if (first)
+						first = false;
+					else
+						s += " ";
+					s += str(arguments[i]);
+				}
+				$("output").appendText(s + "\n");
+			}
+		</script>
+	</head>
+	<body>
+		<pre id="output"></pre>
+		<script type="text/javascript" src="demo.py.js"></script>
+	</body>
+</html>
